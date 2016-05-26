@@ -19,28 +19,6 @@ import TabNavigator from 'react-native-tab-navigator';
 import {Main} from '/Users/jin/webstorm-project/ReactNativeTest/component/Main/Main';
 import {BookMarks} from '/Users/jin/webstorm-project/ReactNativeTest/component/BookMarks/BookMarks'
 import {More} from '/Users/jin/webstorm-project/ReactNativeTest/component/More/More';
-var ws = new WebSocket('ws://10.111.25.118:4000');
-ws.onopen = () => {
-    // 建立连接
-    console.log('open');
-    ws.send('something');
-};
-
-ws.onmessage = (e) => {
-    // 收到了消息
-    console.log('message', e.data);
-};
-
-ws.onerror = (e) => {
-    // 有错误发生
-    console.log('error', e.message);
-};
-
-ws.onclose = (e) => {
-    // 连接关闭
-    console.log('close', e.code, e.reason);
-};
-
 class ReactNativeTest extends Component {
     constructor(props) {
         super(props);
